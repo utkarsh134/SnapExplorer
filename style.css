@@ -33,49 +33,82 @@ body{
 
 .container h2{
     padding-bottom: 15px;
-    /* padding-top: 10px; */
     margin-top: 20px;
 }
 
 .input-box{
     color: #fff;
     width: 34%;
+    height: 3vmax;
     border: 2px solid black;
     margin-top: 10px;
     background-color: rgb(242, 242, 242);
     /* padding: 10px; */
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #input{
     /* flex: 1; */
-    width: 85%;
-    height: 100%;
+    width: 80%;
+    height: 2vh;
     background: transparent;
     border: none;
     outline: none;
     color: #000;
-    padding: 10px;
-    font-size: 16px;
+    padding: 1vw;
+    font-size: 1vmax;
     font-weight: 510;
 }
 
 #browse{
     /* padding: 0 40px; */
     height: 100%;
+    width: 18%;
     border: none;
     outline: none;
-    background-color: orange;
+    background-color: rgb(97, 226, 97);
     /* width: calc(15% - 10px); */
-    font-size: 15px;
+    font-size: 1vw;
+    font-weight: 500;
     cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .results{
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+
+}
+
+.results img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+    
+    
+}
+
+#show-more-btn{
+    background: rgb(97, 226, 97);;
+    color: #000;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 10px auto 100px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+
+    display: none;
 
 }
 
