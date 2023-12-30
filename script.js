@@ -8,18 +8,28 @@ const showMore = document.getElementById('show-more-btn')
 
 let keywords = "" ;
 let page = 1 ;
+let input = document.getElementById('input') ;
+input.addEventListener("keypress", (e)=>{
+    if(e.key === "Enter"){
+        e.preventDefault() ;
+        browse.click() ;
+    }
+})
 
 async function searchImages(){
-    let input = document.getElementById('input') ;
+
     keywords = input.value ;
     if(page === 1) {
         resultBox.innerHTML = "" ;
     }
     // input.value = "Yeah, It is Working"
-    let url = `https://api.unsplash.com/search/photos?page=${page}&query=${keywords}&client_id=${access_key}&per_page=12`
+    if(keywords.length != 0){
+    let url = `https://api.unsplash.com/search/photos?page=${page}&query=${keywords}&client_id=${access_key}&per_page=16`
     let response = await fetch(url) ;
     let data = await response.json() ;
     // console.log(data.results) ;
+
+    // console.log(data.results.length) ;
 
     (data.results).map((result)=>{
         // console.log(element) ;
@@ -42,11 +52,13 @@ async function searchImages(){
         // })
     })
     showMore.style.display = "block" ;
+}
 
 }
 
 browse.addEventListener('click', (e)=>{
     page = 1 ;
+    showMore.style.display = "none" ;
     searchImages() ;
 }) ;
 

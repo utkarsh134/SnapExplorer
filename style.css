@@ -12,7 +12,7 @@ body{
 
 .container{
     /* background-color: red; */
-    width: 80%;
+    width: 90vw;
     margin: 50px auto;
     color: #fff;
     display: flex;
@@ -22,7 +22,7 @@ body{
 }
 
 .container h1{
-    padding: 20px;
+    /* padding: 20px; */
     font-weight: 600;
 
     span{
@@ -38,7 +38,7 @@ body{
 
 .input-box{
     color: #fff;
-    width: 34%;
+    width: 20vmax;
     height: 3vmax;
     border: 2px solid black;
     margin-top: 10px;
@@ -52,21 +52,21 @@ body{
 
 #input{
     /* flex: 1; */
-    width: 80%;
+    width: 60%;
     height: 2vh;
     background: transparent;
     border: none;
     outline: none;
     color: #000;
     padding: 1vw;
-    font-size: 1vmax;
+    font-size: 1.1vmax;
     font-weight: 510;
 }
 
 #browse{
     /* padding: 0 40px; */
     height: 100%;
-    width: 18%;
+    width: 25%;
     border: none;
     outline: none;
     background-color: rgb(97, 226, 97);
@@ -79,12 +79,11 @@ body{
 }
 
 .results{
-    width: 80%;
+    width: 100%;
     margin: 100px auto 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 40px;
-
 }
 
 .results img{
@@ -95,6 +94,7 @@ body{
     
     
 }
+
 
 #show-more-btn{
     background: rgb(97, 226, 97);;
@@ -110,5 +110,11 @@ body{
 
     display: none;
 
+}
+
+@media (max-width:1200) {
+    .results{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
 }
 
