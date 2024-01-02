@@ -13,7 +13,7 @@ body {
 .container {
     /* background-color: red; */
     width: 90vw;
-    margin: 50px auto;
+    margin: 40px auto;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -21,10 +21,16 @@ body {
     align-items: center;
 }
 
+.container span{
+    font-size: 3vmax;
+}
+
 .container h1 {
     font-weight: 600;
+    margin-bottom: 30px;
+    /* color: #000; */
     color: rgb(97, 226, 97);
-    font-size: 40px;
+    font-size: 3vmax;
 }
 
 .container h2 {
@@ -34,17 +40,16 @@ body {
 
 .input-box {
     color: #fff;
-    width: 20vmax;
+    width: 25vmax;
     height: 3vmax;
-    border: 2px solid black;
     margin-top: 10px;
     background-color: rgb(242, 242, 242);
-    /* padding: 10px; */
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 
 #input {
     /* flex: 1; */
@@ -67,7 +72,7 @@ body {
     outline: none;
     background-color: rgb(97, 226, 97);
     /* width: calc(15% - 10px); */
-    font-size: 1vw;
+    font-size: 1vmax;
     font-weight: 500;
     cursor: pointer;
     border-top-right-radius: 4px;
@@ -76,7 +81,7 @@ body {
 
 .results {
     width: 95%;
-    margin: 100px auto 50px;
+    margin: 80px auto 50px;
     display: grid;
     /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
